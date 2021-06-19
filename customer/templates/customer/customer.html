@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+<div class='block-center'>
+<h1>Customer Correlation Between Their Budget And Employment</h1>
+<hr>
+<br>
+<p><strong style="font-size:25px">Correlation: {{correlation}}</strong></p>
+<br>
+{% if graph %}
+
+<img src=" data:image/png;base64 ,{{graph|safe}} ">
+<br>
+{% endif %}
+</div>
+<br>
+<hr>
+{% endblock content %}

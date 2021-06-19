@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} 
+
+{% endblock title %} 
+
+{% block content  %}
+
+<form class="ui form" method='POST' action="" >
+{% csrf_token %}
+  <div class="field">
+    <label>UserName</label>
+    {{form.username}}
+  </div>
+  <div class="field">
+    <label>Email</label>
+   {{form.email}}
+  </div>
+  <div class="field">
+    <label>Password</label>
+   {{form.password1}}
+  </div>
+  <div class="field">
+    <label>Re-Password</label>
+   {{form.password2}}
+  </div>
+  <button class="ui primary button" type="submit">Submit</button>
+</form>
+
+{% endblock content  %}

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <filter id="e" x="-.2326" y="-.03964" width="1.4652" height="1.0793">
+   <feGaussianBlur stdDeviation=".58238"/>
+  </filter>
+  <filter id="d" x="-.2326" y="-.04702" width="1.4652" height="1.094">
+   <feGaussianBlur stdDeviation=".58238"/>
+  </filter>
+  <filter id="c" x="-.2326" y="-.03593" width="1.4652" height="1.0719">
+   <feGaussianBlur stdDeviation=".58238"/>
+  </filter>
+  <filter id="b" x="-.2326" y="-.03286" width="1.4652" height="1.0657">
+   <feGaussianBlur stdDeviation=".58238"/>
+  </filter>
+  <filter id="a" x="-.2326" y="-.03635" width="1.4652" height="1.0727">
+   <feGaussianBlur stdDeviation=".58238"/>
+  </filter>
+ </defs>
+ <path d="m8.93347,10.11442a.99553,.99553 0 0,1 .99553.99553v46.02968a.99553,.99553 0 0,1 -.99553.99553 .99553,.99553 0 0,1 -.99553-.99553v-46.02968a.99553,.99553 0 0,1 .99553-.99553" fill="#c4a000"/>
+ <path d="m9.60358,56.69038h52.07164a.80354,.80354 0 0,1 .80354.80354 .80354,.80354 0 0,1 -.80354.80354h-52.07164a.80354,.80354 0 0,1 -.80354-.80354 .80354,.80354 0 0,1 .80354-.80354" fill="#c4a000"/>
+ <path d="m42.471 15.005h6.0091v42.538h-6.0091z" fill="#008080" opacity=".73781"/>
+ <path d="m13.209 31.092h6.0091v26.621h-6.0091z" fill="#285cd0" opacity=".73781"/>
+ <path d="m23.293 27.825h6.0091v29.729h-6.0091z" fill="#800080" opacity=".73781"/>
+ <path d="m33.2 18.812h6.0091v38.901h-6.0091z" fill="#d45500" opacity=".73781"/>
+ <path d="m52.262 19.265h6.0091v38.447h-6.0091z" fill="#916f6f" opacity=".73781"/>
+ <path d="m23.803 27.146h6.0091v29.729h-6.0091z" fill="#5c3566" filter="url(#d)" opacity=".59025"/>
+ <path d="m34.049 18.133h6.0091v38.901h-6.0091z" fill="#ce5c00" filter="url(#c)" opacity=".59025"/>
+ <path d="m52.941 18.756h6.0091v38.447h-6.0091z" fill="#ad7fa8" filter="url(#a)" opacity=".59025"/>
+ <path transform="matrix(1 0 0 .7481 1.5741 15.903)" d="m12.314 19.943h6.0091v35.264h-6.0091z" fill="#729fcf" filter="url(#e)" opacity=".73781"/>
+ <path d="m42.98 14.326h6.0091v42.538h-6.0091z" fill="#729fcf" filter="url(#b)" opacity=".59025"/>
+ <text x="3.4907" y="51.59724" fill="#666" font-family="Tempus Sans ITC" font-size="3">
+  <tspan x="3.4907" y="51.59724" fill="#666" font-family="Arial">10</tspan>
+ </text>
+ <text x="3.4907" y="43.59724" fill="#666" font-family="Tempus Sans ITC" font-size="3">
+  <tspan x="3.4907" y="43.59724" fill="#666" font-family="Arial">20</tspan>
+ </text>
+ <text x="3.4907" y="35.59724" fill="#666" font-family="Tempus Sans ITC" font-size="3">
+  <tspan x="3.4907" y="35.59724" fill="#666" font-family="Arial">30</tspan>
+ </text>
+ <text x="3.4907" y="27.59725" fill="#666" font-family="Tempus Sans ITC" font-size="3">
+  <tspan x="3.4907" y="27.59725" fill="#666" font-family="Arial">40</tspan>
+ </text>
+ <text x="3.4907" y="19.59725" fill="#666" font-family="Tempus Sans ITC" font-size="3">
+  <tspan x="3.4907" y="19.59725" fill="#666" font-family="Arial">50</tspan>
+ </text>
+</svg>

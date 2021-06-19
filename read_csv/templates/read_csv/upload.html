@@ -1,0 +1,36 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+<h1>Upload Csv File</h1>
+<div class="block-center">
+    {% if error%}
+      <div class="ui negative message">
+        <i class="close icon"></i>
+          <div class="header">
+            {{error}}
+          </div>
+        </div>
+    {% endif %}
+    {% if success_message %}
+      <div class="ui success message">
+        <i class="close icon"></i>
+          <div class="header">
+            {{success_message}}
+          </div>
+        </div>
+    {% endif %}
+    
+</div>
+
+<form action="" method='POST' enctype="multipart/form-data"class='ui form'>
+{% csrf_token %}
+{{file}}
+
+<button class='ui primary button addrecord' type='submit'>Submit</button>
+</form>
+
+{% endblock content %}

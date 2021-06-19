@@ -1,0 +1,162 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} 
+
+{% endblock title %} 
+
+{% block content  %}
+<div class="ui padded segment">
+<header>
+  <h1>&nbsp;What are the statistical messures required? </h1>
+</header>
+  <body>
+  <br>
+  <p>
+  <ul>
+  <li> Method for statistical data analysis</li>
+  <p><strong>Once we talk about measuring central tendency of a variable then 3 M’s come into picture.</strong></p>
+      
+  <ol>
+  <hr>
+  <li> Mean:</li>
+
+  <pre>The third measure of central tendency is the most often used one, 
+and also the one you most probably already know quite well: the mean.The mean 
+is the sum of all the values divided by the number of observations. It is nothing 
+but the average value.</pre>
+<img src="{% static 'mean_formula.png' %}"/>
+<br>
+<img src="{% static 'mean1.png' %}"/>
+
+<br>
+ <hr>
+  <li> Mode:</li>
+
+  <pre>If your variable of interest is measured in nominal or ordinal (Categorical)level 
+then Mode is the most often used technique to measure the central tendency of your data.
+Finding the mode is easy. Basically, it is the value that occurs most frequently.In other words, 
+mode is the most common outcome. Mode is the name of the category that occurs more often.</pre>
+<img src="{% static 'mode.png' %}"/>
+<hr>
+ <li> Median:</li>
+ <pre>The second measure of central tendency is the median. The median is nothing more than 
+ the middle value of your observations when they are order from the smallest to the largest.</pre>
+ <pre>
+<img src="{% static 'median-1.png' %}"/>
+
+ It involves two steps:
+
+1.Oder your cases from smallest to largest
+2.Find the middle Value
+<img src="{% static 'median1-1.png' %}"/>
+
+If you have odd number of cases then finding middle value is easy. Let’s think you have 5 cases.
+So, after ordering always 3rd position is the middle value.If you have even number no cases 
+(let’s think 6 cases). In this case there is no single middle value. Then how do we calculate 
+median? Well, we just take the average of the two middle values.</pre>
+<br>
+<hr>
+<pre><strong>Now the question is When to use what measurement of central tendency?</strong>
+If data is Categorical (Nominal or Ordinal) it is impossible to calculate mean or median. 
+So, go for mode.If your data is quantitative then go for mean or median. Basically, if your 
+data is having some influential outliers or data is highly skewed then median is the best 
+measurement for finding central tendency. Otherwise go for Mean.</pre>
+<hr>
+<li>Stanadard Deviation And Variance</li>
+
+<strong>Why variance and Standard Deviation are good measures of variability?</strong>
+<pre>
+Because variance and standard deviation consider all the values of a variable to calculate 
+the variability of your data.
+
+There are two types of variance and standard deviation in terms of Sample and Population.First 
+their formula has been given. Then, what is the difference between sample and population has 
+been discussed below.
+
+Variance:
+Here is the formula for sample and population variance and standard deviation. 
+There is slight difference observe them carefully.
+
+<br>
+<img src="{% static 'variation.gif' %}"
+<br>
+Where:
+<ul>
+<li>X is individual one value</li>
+<li>N is size of population</li>
+<li>x̄ is the mean of population</li>
+</ul>
+Intuition:
+<ol>
+<li>If variance is high, that means you have larger variability in your dataset. 
+In the other way, we can say more values are spread out around your mean value.</li>
+<li>Standard deviation represents the average distance of an observation from the mean</li>
+<li>The larger the standard deviation, larger the variability of the data.</li>
+</ol>
+</pre>
+<hr>
+<pre>
+<strong>Standard Deviation:</strong>
+
+The Standard Deviation is a measure of how spread out numbers are. 
+Its symbol is σ (the greek letter sigma) for population standard deviation 
+and S for sample standard deviation. It is the square root of the Variance.</pre>
+<pre>A high standard deviation signifies that data is spread more widely from the 
+mean, where a low standard deviation signals that more data align with the mean.In 
+a portfolio of data analysis methods, the standard deviation is useful for quickly 
+determining dispersion of data points.</pre>
+<strong>Issue:</strong>
+<pre>Just like the mean, the standard deviation is deceptive if taken alone.`` 
+For example,if the data have a very strange pattern such as a non-normal curve 
+or a large amount of outliers, then the standard deviation won’t give you all 
+the information you need.</pre>
+<br>
+<hr>
+<pre><strong>Population vs. Sample Variance and Standard Deviation</strong>
+
+The primary task of inferential statistics (or estimating or forecasting) is making 
+an opinion about something by using only an incomplete sample of data.
+
+In statistics, it is very important to distinguish between population and sample.
+A population is defined as all members (e.g. occurrences, prices, annual returns) 
+of a specified group. Population is the whole group.
+
+A sample is a part of a population that is used to describe the characteristics 
+(e.g. mean or standard deviation) of the whole population.The size of a sample can be 
+less than 1%, or 10%, or 60% of the population, but it is never the whole population.
+As both sample and population are not same thing therefore slight difference is there 
+in their formula.</pre>
+<li>What is the correlation coefficient?</li>
+<pre>The correlation coefficient is the specific measure that quantifies the strength of 
+the linear relationship between two variables in a correlation analysis. The coefficient 
+is what we symbolize with the r in a correlation report.
+
+<strong>How is the correlation coefficient used?</strong>
+
+For two variables, the formula compares the distance of each datapoint 
+from the variable mean and uses this to tell us how closely the relationship 
+between the variables can be fit to an imaginary line drawn through the data.
+This is what we mean when we say that correlations look at linear relationships.
+
+<strong>What are some limitations to consider?</strong>
+
+Correlation only looks at the two variables at hand and won’t give insight into 
+relationships beyond the bivariate data. This test won’t detect (and therefore will 
+skewed by) outliers in the data and can’t properly detect curvilinear relationships.
+
+<strong>How do we actually calculate the correlation coefficient?</strong>
+
+The sample correlation coefficient can be represented with a formula:
+<img src="{% static 'equ.webp' %}" style="width:500px">
+
+  
+
+</pre>
+
+  </ol>
+  </ul>
+  </p>
+  </body>
+  
+  </div>
+{% endblock content %} 

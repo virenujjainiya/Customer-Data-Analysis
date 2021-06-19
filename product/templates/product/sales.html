@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="block-center">
+<h1>Sales (Salesman perfomance over the times)</h1>
+<hr>
+<br>
+    
+ {% if graph%}
+   
+     <img src="data:img/png;base64,{{ graph | safe }}" height=600px width=auto>
+   {%endif%}
+<br>
+<br>
+<hr>
+
+</div>
+
+{% endblock content %}

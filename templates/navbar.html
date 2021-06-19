@@ -1,0 +1,72 @@
+{% url 'home-page' as path_to_performance%}
+{% url 'add' as path_to_add%}
+{% url 'upload-file' as path_to_upload%}
+{% url 'customer' as path_to_customer%}
+{% url 'sales' as path_to_sales%}
+{% url 'homepage' as path_to_homepage%}
+{% url 'register' as path_to_register%}
+{% url 'login' as path_to_login%}
+{% url 'logout' as path_to_logout%}
+{% url 'customer_register' as path_to_addcustomer%}
+
+
+
+
+
+
+
+
+<div class="ui secondary  menu">
+  {% if request.user.is_authenticated %}
+     
+   <a class="{%if request.path == path_to_homepage%} active{%endif %} item" href={{path_to_homepage}}>
+    Home
+  </a>
+  <a class="{%if request.path == path_to_performance%} active{%endif %} item" href={{path_to_performance}}>
+    Performancce
+  </a>
+  <a class="{%if request.path == path_to_customer%} active{%endif %} item" href={{path_to_customer}}>
+
+    Customer
+  </a>
+  <a class="{%if request.path == path_to_addcustomer%} active{%endif %} item" href={{path_to_addcustomer}}>
+
+    Add Customer
+  </a>
+  <a class="{%if request.path == path_to_sales%} active{%endif %} item" href={{path_to_sales}}>
+
+    Sales
+  </a>
+    <a class="{%if request.path == path_to_add%} active{%endif %} item" href={{path_to_add}}>
+
+    Add Product
+  </a>
+  <a class="{%if request.path == path_to_upload%} active{%endif %} item" href={{path_to_upload}}>
+
+    Upload File
+  </a>
+  <div class="right menu">
+     
+    <a class="{%if request.path == path_to_logout%} active{%endif %} item" href={{path_to_logout}} >
+      Logout
+    </a>
+  </div>
+ 
+    {% else %}
+      <a class="{%if request.path == path_to_homepage%} active{%endif %} item" href={{path_to_homepage}}>
+        Home
+      </a>
+    <div class="right menu">
+  
+      <a class="{%if request.path == path_to_register%} active{%endif %} item" href={{path_to_register}} >
+      Register
+    </a>
+    <a class="{%if request.path == path_to_login%} active{%endif %} item" href={{path_to_login}} >
+      Log In 
+    </a>
+      </div>
+   
+    
+    {% endif %}
+   
+</div>

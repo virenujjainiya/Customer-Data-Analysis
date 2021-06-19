@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} 
+
+{% endblock title %} 
+
+{% block content  %}
+
+
+
+<div class='block-center'>
+<div class="ui three column grid">
+  <div class="column">
+    <div class="ui fluid card">
+      <div class="image">
+        <img src="{% static '2.png' %}" style="height:326px">
+      </div>
+      <div class="content">
+         <a class="header" href="{% url 'card1' %}">What is  Data Analysis and Data Visualization ?</a>
+
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="ui fluid card">
+      <div class="image">
+         <img src="{% static 'ana.png' %}"style="height:350px ">
+        
+      </div>
+      <div class="content">
+                <a class="header" href="{% url 'card2' %}">What are the types of Graphs ?</a>
+
+         
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="ui fluid card">
+      <div class="image">
+         <img src="{% static 'account1.jpg' %}"style="height:326px">
+      </div>
+      <div class="content">
+                 <a class="header" href="{% url 'card3' %}">What are the statistical messures required for Data Analysis?</a>
+          
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ui three column grid">
+  <div class="column">
+    <div class="ui fluid card">
+      <div class="image">
+        <img src="{% static 'data.jpg' %}" style="height:350px">
+      </div>
+      <div class="content">
+        <a class="header" href="{% url 'card4' %}">How to use our site for Data Analysis ?</a>
+
+
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="ui fluid card">
+      <div class="image">
+         <img src="{% static 'graphs.png' %}"style="height:350px ">
+        
+      </div>
+      <div class="content">
+        <a class="header" href="{% url 'card5' %}">Graphs Provided by Our Site</a>
+
+         
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="ui fluid card">
+      <div class="image">
+         <img src="{% static 'account2.png' %}"style="height:350px">
+      </div>
+      <div class="content">
+         <a class="header" href={% url 'card6' %}>Provided Data Analysis messures by us</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+{% endblock content  %}

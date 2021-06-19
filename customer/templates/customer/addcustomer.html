@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}{% endblock title %}
+
+{% block content %}
+<br>
+<h1>Add Customer</h1>
+<hr>
+
+   {% if error%}
+      <div class="ui negative message">
+        <i class="close icon"></i>
+          <div class="header">
+            {{error_message}}
+          </div>
+        </div>
+      {% endif %}
+{% if add_message%}
+      <div class="ui success message">
+        <i class="close icon"></i>
+          <div class="header">
+            {{add_message}}
+          </div>
+        </div>
+      {% endif %}
+
+<form method="POST" action="" class='ui form'>
+ {% csrf_token %}
+
+ {{form}}
+ <button class='ui primary button addrecord' type='submit'>Submit</button>
+ </form>
+
+{% endblock content%}

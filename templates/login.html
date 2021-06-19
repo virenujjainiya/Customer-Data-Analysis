@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} 
+
+{% endblock title %} 
+
+{% block content  %}
+
+
+<form method='POST' action=""  class='ui form'>
+{% csrf_token %}
+{{form}}
+<button class='ui primary button addrecord' type='submit'>Submit</button>
+
+</form>
+{% endblock content  %}

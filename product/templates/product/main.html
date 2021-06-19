@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content%}
+<div class="ui modal mymodal" >
+<div class="header"><h1>Price Statical Data</h1></div>
+<i class="close icon"></i>
+
+<div class="content">
+<ui>
+   <li>Count: <strong>{{price.count}}</strong></li>
+  
+   <li>Min: <strong>{{price.min}}</strong></li>
+   <li>Max: <strong>{{price.max}}</strong></li>
+   <li>Mean: <strong>{{price.mean|floatformat}}</strong></li>
+   <li>Median:<strong>{{price.median}}</strong></li>
+   <li>Standard Deviation: <strong>{{price.std|floatformat}}</strong></li>
+
+   
+
+</ui>
+  
+</div>
+</div>
+<div>
+    <div class='block-center'>
+      {% if error%}
+      <div class="ui negative message">
+        <i class="close icon"></i>
+          <div class="header">
+            {{error}}
+          </div>
+        </div>
+      {% endif %}
+      
+   {% if request.POST %}
+   {% if graph%}
+     <img src="data:img/png;base64,{{ graph | safe }}">
+   {%endif%}
+{% endif%}
+  </div>
+  <form action="" method="POST" class="ui form">
+  {% csrf_token %}
+    <div class="field">
+      <label>Select A Chart Type:</label>
+      <div class="ui selection dropdown">
+        <input type="hidden" name="sales">
+        <i class="dropdown icon"></i>
+        <div class="default text">---</div>
+        <div class="menu">
+          <div class="item" value="bar"> bar plot </div>
+          <div class="item" value="line">Line plot</div>
+          <div class="item" value="count">Count plot</div>
+
+        </div>
+
+      </div>
+
+    </div>
+    <br>
+    <hr>
+    
+        <div class="ui form">
+          <div class="field">
+           
+            <div class="two fields">
+                  <div class="field">
+                      <label>date from</label>
+                      <input type="date" name="date_from">
+                  </div>
+                  <div class="field">
+                      <label>date to </label>
+                      <input type="date" name="date_to">
+                  </div>
+             </div>
+          </div>
+        </div>
+    <div class='block-center'>
+
+          <button class="ui primary button" type="submit" name="submit">Select</button>
+    </div>
+  </form>
+  
+    <div class='block-center'>
+
+      <button class='ui secondary button' id='modal-btn'> See Sumary</button> 
+      <br>
+      <a href="{% url 'add' %} "><button class=' ui positive button'>Add Record </button></a>
+    </div>
+</div>
+<br>
+<hr>
+ 
+
+{% endblock content%}

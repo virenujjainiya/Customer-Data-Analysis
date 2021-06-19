@@ -1,0 +1,51 @@
+.mymodal{
+    font-size: 20px !important;
+}
+
+ul li{
+   margin: 0 0 10px 0;
+}
+
+.ui.button{
+    width: 200px;
+    border-radius: 1px;
+}
+.block-center{
+
+   text-align: center;
+}
+
+.ui.dropdown{
+    width: 100%;
+}
+.ui.primary.button.addrecord{
+    margin-top: 20px;
+}
+ #left_card{
+    margin-left: 113px;
+} 
+header {
+    /* background-image: url('main.jpg'); */
+    background-color:rgb(113, 158, 243);
+  }
+
+body {
+    /* background-image: url('back.jpg'); */
+    background-color:rgb(201, 217, 248);
+ 
+  }
+  .indented {
+    padding-left: 50pt;
+    padding-right: 50pt;
+  }
+  li{
+      font-weight:bolder;
+      font-style: oblique;
+
+  }
+  pre{
+      font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  h1{
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;  
+    }
